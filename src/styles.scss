@@ -1,0 +1,13 @@
+@import "utils/color.scss";
+.box-input-label {
+  position: relative;
+  margin-top: 10px;
+  .label-border {
+    position: absolute;
+    top: -11px;
+    left: 15px;
+    background: #fff;
+    padding: 0px 0px;
+    color: $primary;
+  }
+}

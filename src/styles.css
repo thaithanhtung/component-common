@@ -6,3 +6,19 @@
   border: 2px solid #000;
   font-size: 2em;
 }
+.boxInputLabel {
+  position: relative;
+  margin: 10px;
+}
+.labelBorder {
+  position: absolute;
+  top: -9px;
+  left: 15px;
+  background: #fff;
+  padding: 0px 0px;
+  color: #0190fe;
+  font-size: 12px;
+}
+.inputLable {
+  border-radius: 4px;
+}
