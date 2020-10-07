@@ -1,0 +1,125 @@
+@import '../../../resources/_mixins.scss';
+
+.custom-arrow {
+  height: 40px;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 40px;
+
+  &::before {
+    display: none;
+  }
+
+  &.slick-disabled {
+    display: none;
+  }
+
+  .ant-btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: unset;
+  }
+}
+
+.custom-prev-arrow {
+  left: 10px;
+  z-index: 1;
+  transform: rotate(270deg);
+}
+
+.custom-next-arrow {
+  right: 10px;
+  z-index: 1;
+  transform: rotate(90deg);
+}
+
+.pps-image-slider {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  height: 140px;
+  width: fit-content;
+  position: relative;
+
+  .slick-list {
+    height: 100%;
+    width: fit-content;
+
+    .slick-track {
+      display: flex;
+      height: 100%;
+      left: 0 !important;
+      max-width: 100vw;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 10px;
+      width: fit-content !important;
+
+      &::-webkit-scrollbar {
+        height: 0;
+      }
+
+      &.show-arrow {
+        .slick-slide {
+          &:first-child .thumb-item {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            padding-right: 10px;
+          }
+        }
+      }
+
+      .slick-slide {
+        height: 100%;
+        margin-left: 10px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          .thumb-item.active {
+            margin-right: 0;
+          }
+        }
+
+        > div {
+          height: 100%;
+        }
+
+        .thumb-item {
+          background-color: rgba($color: #fff, $alpha: 0.4);
+          border-radius: 12px;
+          cursor: pointer;
+          height: 100%;
+          padding: 10px;
+
+          &.active {
+            background-color: rgba($color: #fff, $alpha: 0.8);
+            margin: 0 10px;
+          }
+
+          &.apartment-active {
+            background-color: rgba($color: #fff, $alpha: 0.8);
+          }
+
+          img {
+            @include no-select();
+          }
+        }
+      }
+    }
+
+    .custom-arrow {
+      display: none;
+      position: absolute;
+      button {
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5) !important;
+        border-radius: 100px;
+        height: 36px;
+      }
+    }
+    .d-block {
+      display: block;
+    }
+  }
+}

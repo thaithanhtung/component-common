@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'component-common'
+import { ImageSlideCustom } from 'component-common'
 import 'component-common/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <ImageSlideCustom text='Create React Library Example sagddgadhad 😄' />
 }
 
 export default App

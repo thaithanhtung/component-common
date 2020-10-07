@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900');
+// Colors
+$white: #ffffff;
+
+$text: #74708d;
+$text-lighten: #c0bdd0;
+$text-darken: #615d7c;
+$text-darken-more: #514d6a;
+
+$gray: #d2d9e5;
+$gray-lighten: #eef0f4;
+$gray-lighten-more: #eaeef3; // cus #f2f4f8;
+$gray-lighten-more-more: #f9fafc;
+$gray-darken: #b8beca;
+$gray-border: #e4e9f0;
+
+$black: #0e0b20;
+$black-lighten: #222034;
+$black-lighten-more: #393749;
+
+$blue: #0088ff;
+$blue-darken: #0072d6;
+$orange: #f2a654;
+$yellow: yellow;
+
+$menuBg: #001529;
+$menuBg-darken: #000c17;
+
+// Accent colors
+$default: #096dd9;
+$primary: #096dd9;
+$secondary: #262262;
+$success: #137333;
+$info: #096dd9;
+$warning: #ff9800;
+$danger: #b31412;
+
+// custom
+
+$price-color: $default;
+
+// Font Family
+$base__font-family: 'Roboto', sans-serif;
+
+// Font Size
+$base__font-size: 13 !default;
+
+// Convert value rem() sass mixin
+@function rem($px, $base: $base__font-size) {
+  @return #{floor(($px/$base) * 100) / 100}rem; // to REMs
+  // comment code above and uncomment below for change REMs to PXs
+  //@return #{$px}px;
+}
+
+// Transitions
+@mixin transition-fast() {
+  transition: all 0.05s ease-in-out;
+}
+@mixin transition-middle() {
+  transition: all 0.1s ease-in-out;
+}
+@mixin transition-slow() {
+  transition: all 0.2s ease-in-out;
+}
+@mixin transition-very-slow() {
+  transition: all 0.4s ease-in-out;
+}
+@mixin transition-color() {
+  transition: color 0.2s ease-in-out;
+}
+
+@mixin no-select() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+// Responsive utils
+$xxl-min-width: 1600px;
+$xxl-max-width: 1599px;
+$xl-min-width: 1200px;
+$xl-max-width: 1199px;
+$md-min-width: 992px;
+$md-max-width: 991px;
+$sm-min-width: 768px;
+$sm-max-width: 767px;
+$xs-min-width: 576px;
+$xs-max-width: 575px;
+
+// Border radius
+$border-radius: 25px;
+
+// Desktop & Tablet
+$desktop-button-size: 40px;
+$tablet-button-size: 48px;
